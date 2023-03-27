@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/widgets/custom_view_body.dart';
+import '../widgets/Add_note_file_sheet.dart';
 
 class NoteView extends StatelessWidget {
   const NoteView({super.key});
@@ -8,7 +9,13 @@ class NoteView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(
+              context: context,
+              builder: (context) {
+                return const AddNoteBottomSheet();
+              });
+        },
         child: const Icon(Icons.add),
       ),
       body: const CustomViewBody(),
