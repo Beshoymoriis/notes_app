@@ -38,7 +38,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
       child: Column(
         children: [
           const SizedBox(
-            height: 32,
+            height: 18,
           ),
           CustomTextField(
             onSaved: (value) {
